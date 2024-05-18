@@ -29,7 +29,7 @@ function keliling(){
         let s1 = sisi1.value
         let s2 = sisi2.value
         let s3 = sisi3.value
-        let k = parseInt(s1)+parseInt(s2)+parseInt(s3)
+        let k = parseFloat(s1)+parseFloat(s2)+parseFloat(s3)
         output_keliling.innerHTML = 
         `<strong>Penyelesaian:<br></strong>
         K = Sisi 1 + Sisi 2 + Sisi 3 <br>
