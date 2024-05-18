@@ -9,8 +9,8 @@
 <body>
     
     <header>
-        <h2 class="section-content">Selamat Datang di KATIK<br> 
-            Kalkulator Matematika - Segitiga</h2>
+        <h3 class="section-content">Selamat Datang di KATIK<br> 
+            Kalkulator Matematika - Segitiga</h3>
         <section>
             <p>
                 Selamat datang di website kalkulator matematika untuk menghitung luas serta keliling bangun datar segitiga.
@@ -39,7 +39,7 @@
             
             <p>
                 Formula untuk menghitung luas segitiga adalah:<br><br>
-                <strong>L = 1/2 x a x t</strong><br><br>
+                <strong>L = <sup>1</sup>&frasl;<sub>2</sub> x a x t</strong><br><br>
                 Dimana:<br>
                 L = Luas Segitiga<br>
                 a = Alas Segitiga<br>
@@ -55,36 +55,57 @@
             <header>
                 <h2>Kalkulator Luas Segitiga</h2>
             </header>
-
-            <form>
-                
+               
                 <fieldset>
                     <legend>Masukkan Nilai</legend>
 
                 <section>
                     <div class="line-space">
-                        <input type="text" name="alas_segitiga" placeholder="Alas Segitiga" required>
+                        <input type="number" id="alas" placeholder="Alas Segitiga" required>
                     </div>
                     
                     <div>
-                        <input type="text" name="tinggi_segitiga" placeholder="Tinggi Segitiga" required>
+                        <input type="number" id="tinggi" placeholder="Tinggi Segitiga" required>
                     </div>
-                    </section>
+                </section>
                 
                 <!--Penyelesaian dimunculkan setelah button "Hitung" ditekan-->
-                <p>
+                
+                <!--yang harus ditampilkan
                     Penyelesaian:<br>
                     L = 1/2 x a x t<br>
                     L = 1/2 x (nilai alas segitiga) x (nilai tinggi segitiga)<br>
                     L = <strong>(Hasil hitung)</strong>
+                -->    
+                <p>
+                <div id="output"></div>
                 </p>
+                
+
                 </fieldset>
                 <br>
-                <button type="submit">Hitung</button>
-                <button type="reset" id="reset-button">Reset</button>
-                
-            </form>
+                <div class="center-button">
+                <button id="hitung_luas" onclick="luas()">Hitung</button>
+                <button type="reset" id="reset">Reset</button>
+                </div>
 
+                <script>
+                    const alas = document.getElementById('alas')
+                    const tinggi = document.getElementById('tinggi')
+                    const hitung = document.getElementById('hitung_luas')
+                    const output = document.getElementById('output')
+                    hitung.addEventListener('click', function(){
+                        let a = alas.value
+                        let t = tinggi.value
+                        let l = 0.5*a*t
+                        output.innerHTML = 
+                        `<strong>Penyelesaian:<br></strong>
+                        L = <sup>1</sup>&frasl;<sub>2</sub> x a x t <br>
+                        L = <sup>1</sup>&frasl;<sub>2</sub> x ${a} x ${t} <br>
+                        L = ${l} Cm<sup>2</sup>`
+                    })
+                    </script>
+                    
         </section>
 
         <!--Batas Konten-->
@@ -152,8 +173,11 @@
                 </fieldset>
 
                 <br>
-                <button type="submit">Hitung</button>
-                <button type="reset" id="reset-button">Reset</button>
+                <div class="center-button">
+                <button type="submit" id="submit">Hitung</button>
+                <button type="reset" id="reset">Reset</button>
+                </div>
+                
                 <hr>
 
             </form>
