@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herman Assignment Calculator</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
     
@@ -55,7 +56,8 @@
             <header>
                 <h2>Kalkulator Luas Segitiga</h2>
             </header>
-               
+            
+            <form id="form_luas" action="#">
                 <fieldset>
                     <legend>Masukkan Nilai</legend>
 
@@ -69,16 +71,9 @@
                     </div>
                 </section>
                 
-                <!--Penyelesaian dimunculkan setelah button "Hitung" ditekan-->
-                
-                <!--yang harus ditampilkan
-                    Penyelesaian:<br>
-                    L = 1/2 x a x t<br>
-                    L = 1/2 x (nilai alas segitiga) x (nilai tinggi segitiga)<br>
-                    L = <strong>(Hasil hitung)</strong>
-                -->    
+                <!--Penyelesaian dimunculkan setelah button "Hitung" ditekan--> 
                 <p>
-                <div id="output"></div>
+                <div id="output_luas"></div>
                 </p>
                 
 
@@ -88,24 +83,7 @@
                 <button id="hitung_luas" onclick="luas()">Hitung</button>
                 <button type="reset" id="reset">Reset</button>
                 </div>
-
-                <script>
-                    const alas = document.getElementById('alas')
-                    const tinggi = document.getElementById('tinggi')
-                    const hitung = document.getElementById('hitung_luas')
-                    const output = document.getElementById('output')
-                    hitung.addEventListener('click', function(){
-                        let a = alas.value
-                        let t = tinggi.value
-                        let l = 0.5*a*t
-                        output.innerHTML = 
-                        `<strong>Penyelesaian:<br></strong>
-                        L = <sup>1</sup>&frasl;<sub>2</sub> x a x t <br>
-                        L = <sup>1</sup>&frasl;<sub>2</sub> x ${a} x ${t} <br>
-                        L = ${l} Cm<sup>2</sup>`
-                    })
-                    </script>
-                    
+            </form>       
         </section>
 
         <!--Batas Konten-->
@@ -142,45 +120,50 @@
                 <h2>Kalkulator Keliling Segitiga</h2>
             </header>
 
-            <form>
-
+            <form id="form_keliling" action="#">
                 <fieldset>
                     <legend>Masukkan Nilai</legend>
 
                 <section>
                     <div class="line-space">
-                        <input type="text" name="sisi1_segitiga" placeholder="Sisi 1" required>
+                        <input type="number" id="sisi1" placeholder="Sisi 1" required>
                     </div>
-                        
+
                     <div class="line-space">
-                        <input type="text" name="sisi2_segitiga" placeholder="Sisi 2" required>
+                        <input type="number" id="sisi2" placeholder="Sisi 2" required>
                     </div>
-                    
+
                     <div class="line-space">
-                        <input type="text" name="sisi3_segitiga" placeholder="Sisi 3" required>
+                        <input type="number" id="sisi3" placeholder="Sisi 3" required>
                     </div>
+
+                    <p>
+                    <div id="output_keliling"></div>
+                    </p>
 
                 </section>
                 
                 <!--Penyelesaian dimunculkan setelah button "Hitung" ditekan-->
-                <p>
+                <!--
+                    <p>
                     Penyelesaian:<br>
                     K = Sisi 1 + Sisi 2 + Sisi 3<br>
                     K = (Nilai Sisi 1) + (Nilai Sisi 2) + (Nilai Sisi 3)<br>
                     K = <strong>(Hasil hitung)</strong>
                 </p>
+                -->
 
                 </fieldset>
 
                 <br>
                 <div class="center-button">
-                <button type="submit" id="submit">Hitung</button>
+                <button id="hitung_keliling" onclick="keliling()">Hitung</button>
                 <button type="reset" id="reset">Reset</button>
                 </div>
                 
-                <hr>
-
             </form>
+            
+            <hr>
 
         </section>
                     

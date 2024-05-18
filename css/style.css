@@ -78,6 +78,15 @@ fieldset{
     cursor: pointer;
 }
 
+#hitung_keliling{
+    background-color: darkblue;
+    color: white;
+    border-radius: 10px;
+    padding: 8px;
+    border: 1px;
+    cursor: pointer;
+    }
+
 #switch-keliling{
     padding-top: 12px;
     padding-bottom: 12px;
