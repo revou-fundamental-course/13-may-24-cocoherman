@@ -9,65 +9,166 @@
 <body>
     
     <header>
-        <h1>Welcome to my calculator</h1>
+        <h2 class="section-content">Selamat Datang di KATIK<br> 
+            Kalkulator Matematika - Segitiga</h2>
         <section>
             <p>
-                Hai sobat selamat welcome to my calculator.
+                Selamat datang di website kalkulator matematika untuk menghitung luas serta keliling bangun datar segitiga.
             </p>
         </section>
     </header>
 
+    <!--Ini Title General-->
     <section>
-        <!--Ini Title General-->
-        <div class="section-content">
-            <h3>Segitiga</h3>
-        </div>
-        
-        <button type="button" id="switch-keliling"><u>Switch ke Keliling Segitiga</u></button>
-
         <section>
-            <!--Konten Atas Luas Segitiga-->
             <div class="section-content">
-                <h2>Luas Segitiga</h2>
+                <h4>SEGITIGA</h4>
+            </div>
+            <button type="button" id="switch-keliling"><a href="#keliling">Switch ke Keliling Segitiga</a></button>
+        </section>
+
+        <!--Deskripsi Luas Segitiga-->
+        <section>
+            <div class="section-content">
+                <h2 id="luas">Luas Segitiga</h2>
             </div>
             
             <div class="formula-img">
                 <img src="https://cdn-brilio-net.akamaized.net/real/2023/10/16/2130004/rumus-luas-segitiga-sama-sisi.png">
             </div>
             
-            <p>Konten dari rumus dan definisi rumus</p>
+            <p>
+                Formula untuk menghitung luas segitiga adalah:<br><br>
+                <strong>L = 1/2 x a x t</strong><br><br>
+                Dimana:<br>
+                L = Luas Segitiga<br>
+                a = Alas Segitiga<br>
+                t = Tinggi Segitiga
+            </p>
         </section>
         
         <!--Pemisah-->
         <hr />
         
-        <!--Konten Bawah Luas Segitiga-->
+        <!--Operasi Hitung Luas Segitiga-->
         <section>
             <header>
-                <h2>Luas Segitiga</h2>
+                <h2>Kalkulator Luas Segitiga</h2>
             </header>
 
             <form>
-                <section>
-                    <div>
-                        <label>Alas:</label><input />
-                    </div>
-    
-                    <div>
-                        <label>Tinggi:</label><input />
-                    </div>
-                </section>
                 
-                <p>Diketahui: Lorem ipsum dll</p>
+                <fieldset>
+                    <legend>Masukkan Nilai</legend>
 
-                <button type="button">Hitung</button>
-                <button type="button" id="reset-button">Reset</button>
-
+                <section>
+                    <div class="line-space">
+                        <input type="text" name="alas_segitiga" placeholder="Alas Segitiga" required>
+                    </div>
+                    
+                    <div>
+                        <input type="text" name="tinggi_segitiga" placeholder="Tinggi Segitiga" required>
+                    </div>
+                    </section>
+                
+                <!--Penyelesaian dimunculkan setelah button "Hitung" ditekan-->
+                <p>
+                    Penyelesaian:<br>
+                    L = 1/2 x a x t<br>
+                    L = 1/2 x (nilai alas segitiga) x (nilai tinggi segitiga)<br>
+                    L = <strong>(Hasil hitung)</strong>
+                </p>
+                </fieldset>
+                <br>
+                <button type="submit">Hitung</button>
+                <button type="reset" id="reset-button">Reset</button>
+                
             </form>
 
         </section>
 
+        <!--Batas Konten-->
+        <hr />
+                
+        <!--Deskripsi Keliling Segitiga-->
+        <section>
+            <button type="button" id="switch-luas"><a href="#luas">Switch ke Luas Segitiga</a></button>
+            <div class="section-content">
+                <h2 id="keliling">Keliling Segitiga</h2>
+            </div>
+            
+            <div class="formula-img">
+                <img src="https://cdn-brilio-net.akamaized.net/real/2023/10/16/2130004/rumus-luas-segitiga-sama-sisi.png">
+            </div>
+            
+            <p>
+                Formula untuk menghitung keliling segitiga adalah:<br><br>
+                <strong>K = Sisi 1 + Sisi 2 + Sisi 3</strong><br><br>
+                Dimana:<br>
+                K = Keliling Segitiga<br>
+                Sisi 1 = Sisi 1 Segitiga<br>
+                Sisi 2 = Sisi 2 Segitiga<br>
+                Sisi 3 = Sisi 3 Segitiga
+            </p>
+        </section>
+       
+        <!--Pemisah-->
+        <hr />
+        
+        <!--Operasi Hitung Keliling Segitiga-->
+        <section>
+            <header>
+                <h2>Kalkulator Keliling Segitiga</h2>
+            </header>
+
+            <form>
+
+                <fieldset>
+                    <legend>Masukkan Nilai</legend>
+
+                <section>
+                    <div class="line-space">
+                        <input type="text" name="sisi1_segitiga" placeholder="Sisi 1" required>
+                    </div>
+                        
+                    <div class="line-space">
+                        <input type="text" name="sisi2_segitiga" placeholder="Sisi 2" required>
+                    </div>
+                    
+                    <div class="line-space">
+                        <input type="text" name="sisi3_segitiga" placeholder="Sisi 3" required>
+                    </div>
+
+                </section>
+                
+                <!--Penyelesaian dimunculkan setelah button "Hitung" ditekan-->
+                <p>
+                    Penyelesaian:<br>
+                    K = Sisi 1 + Sisi 2 + Sisi 3<br>
+                    K = (Nilai Sisi 1) + (Nilai Sisi 2) + (Nilai Sisi 3)<br>
+                    K = <strong>(Hasil hitung)</strong>
+                </p>
+
+                </fieldset>
+
+                <br>
+                <button type="submit">Hitung</button>
+                <button type="reset" id="reset-button">Reset</button>
+                <hr>
+
+            </form>
+
+        </section>
+                    
     </section>
 
 </body>
+
+<footer>
+    <p>
+        &copy;2024 Assignment by hermanhidayat.job@gmail.com<br>
+        All Rights Reserved | Powered by RevoU<br>
+    </p>
+</footer>
+
 </html>

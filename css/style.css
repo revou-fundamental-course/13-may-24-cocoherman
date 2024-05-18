@@ -1,7 +1,24 @@
 /*Ini CSS*/
 
+header{
+    text-align: center;
+}
+
+body{
+    background-color: darkgrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover{
+    color: orangered;
+}
+
+hr{
+    border-color: grey;
+}
+
 .section-content{
-    background-color: chocolate;
+    background-color: darkblue;
     color: white;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -10,15 +27,6 @@
 
 .section-content>h3{
     margin: 0;
-}
-
-#switch-keliling{
-    padding-top: 12px;
-    padding-bottom: 12px;
-    width: 100%;
-    background-color: white;
-    border: 0px;
-    color: blue;
 }
 
 .formula-img{
@@ -31,21 +39,56 @@ img{
 
 input{
     width: 100%;
-    background-color: bisque;
+    background-color: lavender;
     border: 1px solid;
     border-radius: 4px;
     padding: 4px;
-    font-family: math;
+}
+
+.line-space{
+    line-height: 30px;
 }
 
 form>button{
-    background-color: chocolate;
+    background-color: darkblue;
+    color: white;
     border-radius: 10px;
     padding: 8px;
     border: 1px;
-}
+    cursor: pointer;
+    }
 
 #reset-button{
-    background-color: olive;
+    background-color: firebrick;
     color: white;
 }
+
+#switch-keliling{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+    background-color: darkgrey;
+    border: 0px;
+    color: blue;
+    cursor: pointer;
+}
+
+#switch-luas{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+    background-color: darkgray;
+    border: 0px;
+    color: blue;
+    cursor: pointer;
+}
+
+footer{
+    background-color: darkblue;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    font-size: small;
+}
+
