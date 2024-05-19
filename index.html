@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +35,7 @@
             </div>
             
             <div class="formula-img">
-                <video src="assets/segitiga.mp4" autoplay loop width="250px" height="250px"></video>
+                <img src="assets/segitiga.png" alt="segitiga" width="40%" height="40%">
             </div>
             
             <p>
@@ -63,12 +63,26 @@
 
                 <section>
                     <div class="line-space">
-                        <input type="number" id="alas" placeholder="Alas Segitiga" required>
+                        <input type="number" id="alas" placeholder="Alas Segitiga">
                     </div>
                     
-                    <div>
-                        <input type="number" id="tinggi" placeholder="Tinggi Segitiga" required>
+                    <div class="line-space">
+                        <input type="number" id="tinggi" placeholder="Tinggi Segitiga">
                     </div>
+
+                    <div>
+                        <select id="satuan_luas">
+                            <option value="-">- Pilih Satuan -</option>
+                            <option value="KM">KM</option>
+                            <option value="HM">HM</option>
+                            <option value="DAM">DAM</option>
+                            <option value="M">M</option>
+                            <option value="DM">DM</option>
+                            <option value="CM">CM</option>
+                            <option value="MM">MM</option>
+                        </select>
+                    </div>
+
                 </section>
                 
                 <!--Penyelesaian dimunculkan setelah button "Hitung" ditekan--> 
@@ -80,8 +94,8 @@
                 </fieldset>
                 <br>
                 <div class="center-button">
-                <button id="hitung_luas" onclick="luas()">Hitung</button>
-                <button type="reset" id="reset" onclick="reset_luas()">Reset</button>
+                <button type="button" id="hitung_luas" onclick="luas()">Hitung</button>
+                <button type="reset" id="reset_luas" onclick="reset_luas()">Reset</button>
                 </div>
             </form>       
         </section>
@@ -97,7 +111,7 @@
             </div>
             
             <div class="formula-img">
-                <video src="assets/segitiga.mp4" autoplay loop width="250px" height="250px"></video>
+                <img src="assets/segitiga.png" alt="segitiga" width="40%" height="40%">
             </div>
             
             <p>
@@ -126,15 +140,28 @@
 
                 <section>
                     <div class="line-space">
-                        <input type="text" id="sisi1" placeholder="Sisi 1" required>
+                        <input type="number" id="sisi1" placeholder="Sisi 1">
                     </div>
 
                     <div class="line-space">
-                        <input type="text" id="sisi2" placeholder="Sisi 2" required>
+                        <input type="number" id="sisi2" placeholder="Sisi 2">
                     </div>
 
                     <div class="line-space">
-                        <input type="text" id="sisi3" placeholder="Sisi 3" required>
+                        <input type="number" id="sisi3" placeholder="Sisi 3">
+                    </div>
+
+                    <div>
+                        <select id="satuan_keliling">
+                            <option value="-">- Pilih Satuan -</option>
+                            <option value="KM">KM</option>
+                            <option value="HM">HM</option>
+                            <option value="DAM">DAM</option>
+                            <option value="M">M</option>
+                            <option value="DM">DM</option>
+                            <option value="CM">CM</option>
+                            <option value="MM">MM</option>
+                        </select>
                     </div>
 
                     <p>
@@ -142,23 +169,13 @@
                     </p>
 
                 </section>
-                
-                <!--Penyelesaian dimunculkan setelah button "Hitung" ditekan-->
-                <!--
-                    <p>
-                    Penyelesaian:<br>
-                    K = Sisi 1 + Sisi 2 + Sisi 3<br>
-                    K = (Nilai Sisi 1) + (Nilai Sisi 2) + (Nilai Sisi 3)<br>
-                    K = <strong>(Hasil hitung)</strong>
-                </p>
-                -->
 
                 </fieldset>
 
                 <br>
                 <div class="center-button">
-                <button id="hitung_keliling" onclick="keliling()">Hitung</button>
-                <button type="reset" id="reset">Reset</button>
+                <button type="button" id="hitung_keliling" onclick="keliling()">Hitung</button>
+                <button type="reset" id="reset_keliling">Reset</button>
                 </div>
                 
             </form>
