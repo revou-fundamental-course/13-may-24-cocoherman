@@ -1,4 +1,4 @@
-//Ini JS .
+//Ini JS 
 
 //Function menghitung luas segitiga
 function luas(){
