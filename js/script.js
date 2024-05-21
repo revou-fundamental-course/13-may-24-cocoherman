@@ -49,9 +49,3 @@ function keliling(){
         })    
     })
 }
-
-
-
-
-
-
