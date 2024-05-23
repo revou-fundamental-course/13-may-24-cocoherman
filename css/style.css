@@ -22,7 +22,12 @@ body{
     background-color: darkgray;
 }
 
-/*Switch BUtton*/
+/*Switch Button*/
+
+a:hover{
+    color: orangered;
+}
+
 #switchKeliling{
     padding-top: 6px;
     padding-bottom: 6px;
