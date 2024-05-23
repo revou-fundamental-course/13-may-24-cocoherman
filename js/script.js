@@ -1,3 +1,5 @@
+
+
 //Validasi nilai yang diinput
 function funcLuas() {
     var alas = parseFloat(document.getElementById('inputAlas').value);

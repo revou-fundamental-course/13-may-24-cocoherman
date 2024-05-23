@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coco Herman</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
 
@@ -28,12 +28,14 @@
 <!--Luas Segitiga Section-->
 
 <!--Navigasi ke Keliling-->
-<button type="button" id="switchKeliling">Switch Keliling Segitiga</button>
+    <button id="switchKeliling"><a href="#kontenKeliling">Kalkulator Keliling Segitiga</a></button>
+    
 
+<div id="kontenLuas">
 <!--Deskripsi Luas Segitiga-->
     <section>
         <h2 class="subtitleSegitiga">Luas Segitiga</h2>
-        <div class="formula-img"><img src="assets/segitiga.png" alt="segitiga" width="40%" height="40%"></div>
+        <div class="formula-img"><img src="assets/luas.png" alt="segitiga" width="40%" height="40%"></div>
         <p class="deskripsi">
             Formula untuk menghitung luas segitiga adalah:<br><br>
             <strong>L = <sup>1</sup>&frasl;<sub>2</sub> x a x t</strong><br><br>
@@ -87,17 +89,19 @@
         </form>
     </section>
     <hr />
+</div>
 
 <!--Keliling Segitiga Section-->
 
+<div id="kontenKeliling">
 <!--Navigasi ke Keliling-->
 <br>
-<button type="button" id="switchLuas">Switch ke Luas Segitiga</button>
+<button id="switchLuas"><a href="#kontenLuas"><u>Kalkulator Luas Segitiga</u></a></button>
 
 <!--Deskripsi Keliling Segitiga-->
     <section>
         <h2 class="subtitleSegitiga">Keliling Segitiga</h2>
-        <div class="formula-img"><img src="assets/segitiga.png" alt="segitiga" width="40%" height="40%"></div>
+        <div class="formula-img"><img src="assets/keliling.png" alt="segitiga" width="40%" height="40%"></div>
         <p class="deskripsi">
             Formula untuk menghitung keliling segitiga adalah:<br><br>
             <strong>K = Sisi 1 + Sisi 2 + Sisi 3</strong><br><br>
@@ -158,6 +162,7 @@
 
     </section>
     <hr />
+</div>
 
 </body>
 

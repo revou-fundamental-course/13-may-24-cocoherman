@@ -24,8 +24,8 @@ body{
 
 /*Switch BUtton*/
 #switchKeliling{
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     width: 100%;
     background-color: darkgrey;
     border: 0px;
@@ -34,8 +34,8 @@ body{
 }
 
 #switchLuas{
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     width: 100%;
     background-color: darkgray;
     border: 0px;
