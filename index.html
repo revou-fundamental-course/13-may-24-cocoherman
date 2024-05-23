@@ -3,188 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herman Assignment Calculator</title>
+    <title>Coco Herman</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
+
 <body>
-    <!--masih-->
-    <header>
-        <h3 class="section-content">Selamat Datang di KATIK<br> 
-            Kalkulator Matematika - Segitiga</h3>
-        <section>
-            <p>
-                Selamat datang di website kalkulator matematika untuk menghitung luas serta keliling bangun datar segitiga.
-            </p>
-        </section>
-    </header>
 
-    <!--Ini Title General-->
+<!--Part Title & Subtitle General-->
+<header>
+    <!--Title-->
+        <h3>Selamat Datang di KATIK<br> 
+            Kalkulator Matematika - Segitiga
+        </h3>
+    
+    <!--Subtitle-->
+        <p class="subtitle">
+            Selamat datang di website kalkulator matematika untuk menghitung luas serta keliling bangun datar segitiga.
+        </p>
+
+        <h3>SEGITIGA</h3>
+</header>
+
+<!--Luas Segitiga Section-->
+
+<!--Navigasi ke Keliling-->
+<button type="button" id="switchKeliling">Switch Keliling Segitiga</button>
+
+<!--Deskripsi Luas Segitiga-->
     <section>
-        <section>
-            <div class="section-content">
-                <h3>SEGITIGA</h3>
-            </div>
-            <button type="button" id="switch-keliling"><a href="#keliling">Switch ke Keliling Segitiga</a></button>
-        </section>
+        <h2 class="subtitleSegitiga">Luas Segitiga</h2>
+        <div class="formula-img"><img src="assets/segitiga.png" alt="segitiga" width="40%" height="40%"></div>
+        <p class="deskripsi">
+            Formula untuk menghitung luas segitiga adalah:<br><br>
+            <strong>L = <sup>1</sup>&frasl;<sub>2</sub> x a x t</strong><br><br>
+            Dimana:<br>
+            L = Luas Segitiga<br>
+            a = Alas Segitiga<br>
+            t = Tinggi Segitiga
+        </p>
+    </section>
+    <hr />
 
-        <!--Deskripsi Luas Segitiga-->
-        <section>
-            <div class="section-content">
-                <h2 id="luas">Luas Segitiga</h2>
-            </div>
+<!--Operasi Hitung Luas Segitiga-->
+    <section>
+        <header>
+            <h2>Kalkulator Luas Segitiga</h2>
+        </header>
+
+        <form id="formLuas" action="#">
+            <fieldset>
+                <legend>Masukkan Nilai:</legend>
+                <div class="lineSpace">
+                <input type="number" id="inputAlas" step="0.001" placeholder="Alas Segitiga" required>
+                </div>
+                <div class="lineSpace">
+                <input type="number" id="inputTinggi" step="0.001" placeholder="Tinggi Segitiga" required>
+                </div>
+                <div>
+                <select title="satuan" id="satuanLuas">
+                    <option disabled selected value="">- Pilih Satuan -</option>
+                    <option value="KM">KM</option>
+                    <option value="HM">HM</option>
+                    <option value="DAM">DAM</option>
+                    <option value="M">M</option>
+                    <option value="DM">DM</option>
+                    <option value="CM">CM</option>
+                    <option value="MM">MM</option>
+                </select>
+                </div>
             
-            <div class="formula-img">
-                <img src="assets/segitiga.png" alt="segitiga" width="40%" height="40%">
-            </div>
-            
-            <p>
-                Formula untuk menghitung luas segitiga adalah:<br><br>
-                <strong>L = <sup>1</sup>&frasl;<sub>2</sub> x a x t</strong><br><br>
-                Dimana:<br>
-                L = Luas Segitiga<br>
-                a = Alas Segitiga<br>
-                t = Tinggi Segitiga
-            </p>
-        </section>
-        
-        <!--Pemisah-->
-        <hr />
-        
-        <!--Operasi Hitung Luas Segitiga-->
-        <section>
-            <header>
-                <h2>Kalkulator Luas Segitiga</h2>
-            </header>
-            
-            <form id="form_luas" action="#">
-                <fieldset>
-                    <legend>Masukkan Nilai</legend>
+            </fieldset>
 
-                <section>
-                    <div class="line-space">
-                        <input type="number" id="alas" placeholder="Alas Segitiga">
-                    </div>
-                    
-                    <div class="line-space">
-                        <input type="number" id="tinggi" placeholder="Tinggi Segitiga">
-                    </div>
-
-                    <div>
-                        <select id="satuan_luas">
-                            <option disabled selected value="-">- Pilih Satuan -</option>
-                            <option value="KM">KM</option>
-                            <option value="HM">HM</option>
-                            <option value="DAM">DAM</option>
-                            <option value="M">M</option>
-                            <option value="DM">DM</option>
-                            <option value="CM">CM</option>
-                            <option value="MM">MM</option>
-                        </select>
-                    </div>
-
-                </section>
-                
-                <!--Penyelesaian dimunculkan setelah button "Hitung" ditekan--> 
+            <!--Penyelesaian dimunculkan setelah button "Hitung" ditekan--> 
                 <p>
-                <div id="output_luas"></div>
+                    <div id="output_luas"></div>
                 </p>
                 
-
-                </fieldset>
-                <br>
-                <div class="center-button">
-                <button type="button" id="hitung_luas" onclick="luas()">Hitung</button>
-                <button type="reset" id="reset_luas" onclick="reset_luas()">Reset</button>
+                <div class="centerButton">
+                <button type="button" id="hitung_luas" onclick="funcLuas()">Hitung</button>
+                <button type="reset" id="reset_luas">Reset</button>
                 </div>
-            </form>       
-        </section>
+        </form>
+    </section>
+    <hr />
 
-        <!--Batas Konten-->
-        <hr />
-                
-        <!--Deskripsi Keliling Segitiga-->
-        <section>
-            <button type="button" id="switch-luas"><a href="#luas">Switch ke Luas Segitiga</a></button>
-            <div class="section-content">
-                <h2 id="keliling">Keliling Segitiga</h2>
+<!--Keliling Segitiga Section-->
+
+<!--Navigasi ke Keliling-->
+<br>
+<button type="button" id="switchLuas">Switch ke Luas Segitiga</button>
+
+<!--Deskripsi Keliling Segitiga-->
+    <section>
+        <h2 class="subtitleSegitiga">Keliling Segitiga</h2>
+        <div class="formula-img"><img src="assets/segitiga.png" alt="segitiga" width="40%" height="40%"></div>
+        <p class="deskripsi">
+            Formula untuk menghitung keliling segitiga adalah:<br><br>
+            <strong>K = Sisi 1 + Sisi 2 + Sisi 3</strong><br><br>
+            Dimana:<br>
+            K = Keliling Segitiga<br>
+            Sisi 1 = Sisi 1 Segitiga<br>
+            Sisi 2 = Sisi 2 Segitiga<br>
+            Sisi 3 = Sisi 3 Segitiga
+        </p>
+    </section>
+    <hr />
+
+<!--Operasi Hitung Keliling Segitiga-->
+    <section>
+     <header>
+        <h2>Kalkulator Keliling Segitiga</h2>
+    </header>
+
+    <form id="formKeliling" action="#">
+        <fieldset>
+            <legend>Masukkan Nilai:</legend>
+
+            <div class="lineSpace">
+            <input type="number" id="inputSisi1" placeholder="Panjang Sisi 1">
             </div>
-            
-            <div class="formula-img">
-                <img src="assets/segitiga.png" alt="segitiga" width="40%" height="40%">
+            <div class="lineSpace">
+            <input type="number" id="inputSisi2" placeholder="Panjang Sisi 2">
             </div>
-            
-            <p>
-                Formula untuk menghitung keliling segitiga adalah:<br><br>
-                <strong>K = Sisi 1 + Sisi 2 + Sisi 3</strong><br><br>
-                Dimana:<br>
-                K = Keliling Segitiga<br>
-                Sisi 1 = Sisi 1 Segitiga<br>
-                Sisi 2 = Sisi 2 Segitiga<br>
-                Sisi 3 = Sisi 3 Segitiga
-            </p>
-        </section>
-       
-        <!--Pemisah-->
-        <hr />
-        
-        <!--Operasi Hitung Keliling Segitiga-->
-        <section>
-            <header>
-                <h2>Kalkulator Keliling Segitiga</h2>
-            </header>
+            <div class="lineSpace">
+            <input type="number" id="inputSisi3" placeholder="Panjang Sisi 3">
+            </div>
+            <div>
+            <select title="satuan" id="satuanKeliling">
+                <option disabled selected value="">- Pilih Satuan -</option>
+                <option value="KM">KM</option>
+                <option value="HM">HM</option>
+                <option value="DAM">DAM</option>
+                <option value="M">M</option>
+                <option value="DM">DM</option>
+                <option value="CM">CM</option>
+                <option value="MM">MM</option>
+            </select>
+            </div>
 
-            <form id="form_keliling" action="#">
-                <fieldset>
-                    <legend>Masukkan Nilai</legend>
+        </fieldset>
 
-                <section>
-                    <div class="line-space">
-                        <input type="number" id="sisi1" placeholder="Sisi 1">
-                    </div>
-
-                    <div class="line-space">
-                        <input type="number" id="sisi2" placeholder="Sisi 2">
-                    </div>
-
-                    <div class="line-space">
-                        <input type="number" id="sisi3" placeholder="Sisi 3">
-                    </div>
-
-                    <div>
-                        <select id="satuan_keliling">
-                            <option disabled selected value="-">- Pilih Satuan -</option>
-                            <option value="KM">KM</option>
-                            <option value="HM">HM</option>
-                            <option value="DAM">DAM</option>
-                            <option value="M">M</option>
-                            <option value="DM">DM</option>
-                            <option value="CM">CM</option>
-                            <option value="MM">MM</option>
-                        </select>
-                    </div>
-
-                    <p>
+                <!--Penyelesaian dimunculkan setelah button "Hitung" ditekan--> 
+                <p>
                     <div id="output_keliling"></div>
-                    </p>
-
-                </section>
-
-                </fieldset>
-
-                <br>
-                <div class="center-button">
-                <button type="button" id="hitung_keliling" onclick="keliling()">Hitung</button>
+                </p>
+                
+                <div class="centerButton">
+                <button type="button" id="hitung_keliling" onclick="funcKeliling()">Hitung</button>
                 <button type="reset" id="reset_keliling">Reset</button>
                 </div>
-                
-            </form>
-            
-            <hr>
 
-        </section>
-                    
+    </form>
+
     </section>
+    <hr />
 
 </body>
 

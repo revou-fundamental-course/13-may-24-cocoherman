@@ -1,110 +1,29 @@
-/*Ini CSS*/
-
+/*Part Title & Subtitle General*/
 header{
+    font-family: arial;
     text-align: center;
 }
 
-body{
-    background-color: darkgrey;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    padding: 10px;
-}
-
-a:hover{
-    color: orangered;
-}
-
-hr{
-    border-color: grey;
-}
-
-.section-content{
+header>h3{
     background-color: darkblue;
     color: white;
     padding-top: 8px;
     padding-bottom: 8px;
-    text-align: center;
 }
 
-.section-content>h3{
-    margin: 0;
+.subtitle{
+    font-size: 14px;
 }
 
-.formula-img{
-    text-align: center;
+/*Body*/
+body{    
+    font-family: arial;
+    font-size: 12;
+    background-color: darkgray;
 }
 
-img{
-    height: 100%;
-}
-
-input{
-    width: 100%;
-    background-color: lavender;
-    border: 1px solid;
-    border-radius: 4px;
-    padding: 4px;
-}
-
-select{
-line-height: 30px;
-border-radius: 8px;
-background-color: lavender;
-padding-bottom: 2px;
-padding-top: 2px;
-}
-
-fieldset{
-    border-radius: 4%;
-}
-
-.line-space{
-    line-height: 30px;
-}
-
-.center-button{
-    display: flex;
-    justify-content: center;
-}
-
-#hitung_luas{
-    background-color: darkblue;
-    color: white;
-    border-radius: 10px;
-    padding: 8px;
-    border: 1px;
-    cursor: pointer;
-    }
-
-#reset_luas{
-    background-color: firebrick;
-    color: white;
-    border-radius: 10px;
-    padding: 8px;
-    border: 1px;
-    cursor: pointer;
-}
-
-#reset_keliling{
-    background-color: firebrick;
-    color: white;
-    border-radius: 10px;
-    padding: 8px;
-    border: 1px;
-    cursor: pointer;
-}
-
-#hitung_keliling{
-    background-color: darkblue;
-    color: white;
-    border-radius: 10px;
-    padding: 8px;
-    border: 1px;
-    cursor: pointer;
-    }
-
-#switch-keliling{
+/*Switch BUtton*/
+#switchKeliling{
     padding-top: 12px;
     padding-bottom: 12px;
     width: 100%;
@@ -114,7 +33,7 @@ fieldset{
     cursor: pointer;
 }
 
-#switch-luas{
+#switchLuas{
     padding-top: 12px;
     padding-bottom: 12px;
     width: 100%;
@@ -124,6 +43,129 @@ fieldset{
     cursor: pointer;
 }
 
+/*Deskripsi Luas dan Keliling Segitiga*/
+
+body>h3{
+    background-color: darkblue;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.subtitleSegitiga{
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+section>h2{
+    text-align: center;
+}
+
+.formula-img{
+    text-align: center;
+}
+
+.deskripsi{
+    font-size: 12px;
+}
+
+hr{
+    border-color: black;
+}
+
+/*Operasi Hitung Luas Segitiga*/
+
+/*Form*/
+fieldset{
+    border-radius: 8px;
+}
+
+legend{
+    font-size: 12px;
+}
+
+input{
+    border: 1px solid;
+    border-radius: 6px;
+    background-color: lavender;
+    width: 100%;
+    padding: 3px;
+}
+
+.lineSpace{
+    line-height: 25px;
+}
+
+select{
+    border: 1px solid;
+    border-radius: 6px;
+    background-color: lavender;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#output_luas{
+    font-size: 12px;
+}
+
+#output_keliling{
+    font-size: 12px;
+}
+
+/*Button*/
+.centerButton{
+    display: flex;
+    justify-content: center;
+}
+
+#hitung_luas{
+    border: 0px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: small;
+    cursor: pointer;
+}
+
+#reset_luas{
+    border: 0px;
+    background-color: firebrick;
+    color: white;
+    border-radius: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: small;
+    cursor: pointer;
+}
+
+#hitung_keliling{
+    border: 0px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: small;
+    cursor: pointer;
+}
+
+#reset_keliling{
+    border: 0px;
+    background-color: firebrick;
+    color: white;
+    border-radius: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: small;
+    cursor: pointer;
+}
+
+/*Footer*/
 footer{
     background-color: darkblue;
     color: white;
@@ -132,5 +174,3 @@ footer{
     text-align: center;
     font-size: small;
 }
-
-/*masih cek*/

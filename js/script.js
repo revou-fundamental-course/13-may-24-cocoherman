@@ -1,51 +1,95 @@
-//Ini JS 
+//Validasi nilai yang diinput
+function funcLuas() {
+    var alas = parseFloat(document.getElementById('inputAlas').value);
+    var tinggi = parseFloat(document.getElementById('inputTinggi').value);
+    var satuanLuas = document.getElementById('satuanLuas').value;
 
-//Function menghitung luas segitiga
-function luas(){
-    const alas = document.getElementById('alas')
-    const tinggi = document.getElementById('tinggi')
-    const satuan_luas = document.getElementById('satuan_luas')
-    const hitung_luas = document.getElementById('hitung_luas')
-    const output_luas = document.getElementById('output_luas')
-    hitung_luas.addEventListener('click', function(){
-        let a = alas.value
-        let t = tinggi.value
-        let sl = satuan_luas.value
-        let luas = 0.5*parseFloat(a)*parseFloat(t)
-        //l = luas.toFixed(3)
-        output_luas.innerHTML = 
-        `<strong>Penyelesaian:<br></strong>
+    if (alas === 0 || tinggi === 0 || satuanLuas == 0 || isNaN(alas) || isNaN(tinggi)) {
+        alert("Data tidak valid. Nilai alas, tinggi dan satuan ukur tidak boleh nol.");
+        return;
+    }
+
+    if (countDecimalPlaces(alas) > 3 || countDecimalPlaces(tinggi) > 3) {
+        alert("Data tidak valid. Nilai alas atau tinggi tidak boleh lebih dari 3 digit desimal.");
+        return;
+    }
+
+    //Nilai yang diinput dihitung
+    let luas = 0.5 * alas * tinggi;
+    console.log(alas, satuanLuas);
+    console.log(tinggi, satuanLuas);
+    console.log(luas, satuanLuas);
+
+    // Menampilkan hasil luas dengan ketentuan
+    if (Number.isInteger(luas)) {
+        luas = luas.toFixed(0); // Tanpa digit desimal jika bilangan bulat
+    } else {
+        luas = luas.toFixed(3); // Hanya 3 digit desimal jika desimal
+    }
+
+    output_luas.innerHTML =
+        `<strong>Penyelesaian:<br><br></strong>
         L = <sup>1</sup>&frasl;<sub>2</sub> x a x t <br>
-        L = <sup>1</sup>&frasl;<sub>2</sub> x ${a} x ${t} <br>
-        L = ${luas} ${sl}<sup>2</sup>`
-    reset_luas.addEventListener('click', function(){
-        output_luas.innerHTML = ``
-    })    
-    })
+        L = <sup>1</sup>&frasl;<sub>2</sub> x ${alas} x ${tinggi} <br>
+        L = ${luas} ${satuanLuas}<sup>2</sup>`;
+
+    reset_luas.addEventListener('click', function() {
+        output_luas.innerHTML = ``;
+    });
+}
+
+//Nilai desimal terdiri dari 3 angka
+function countDecimalPlaces(num) {
+    if (Math.floor(num) === num || !isFinite(num)) return 0;
+    return num.toString().split(".")[1].length || 0;
 }
 
 //Function menghitung keliling segitiga
-function keliling(){
-    const sisi1 = document.getElementById('sisi1')
-    const sisi2 = document.getElementById('sisi2')
-    const sisi3 = document.getElementById('sisi3')
-    const satuan_keliling = document.getElementById('satuan_keliling')
-    const hitung_keliling = document.getElementById('hitung_keliling')
-    const output_keliling = document.getElementById('output_keliling')
-    hitung_keliling.addEventListener('click', function(){
-        let s1 = sisi1.value
-        let s2 = sisi2.value
-        let s3 = sisi3.value
-        let sk = satuan_keliling.value
-        let keliling = parseFloat(s1)+parseFloat(s2)+parseFloat(s3)
-        //k = keliling.toFixed(3)
-        output_keliling.innerHTML = 
-        `<strong>Penyelesaian:<br></strong>
+
+//Validasi nilai yang diinput
+function funcKeliling() {
+    var sisi1 = parseFloat(document.getElementById('inputSisi1').value);
+    var sisi2 = parseFloat(document.getElementById('inputSisi2').value);
+    var sisi3 = parseFloat(document.getElementById('inputSisi3').value);
+    var satuanKeliling = document.getElementById('satuanKeliling').value;
+
+    if (sisi1 === 0 || sisi2 === 0 || sisi3 === 0 || satuanKeliling == 0 || isNaN(sisi1) || isNaN(sisi2) || isNaN(sisi3)) {
+        alert("Data tidak valid. Nilai alas, tinggi dan satuan ukur tidak boleh nol.");
+        return;
+    }
+
+    if (countDecimalPlaces(sisi1) > 3 || countDecimalPlaces(sisi2) > 3 || countDecimalPlaces(sisi3) > 3 ) {
+        alert("Data tidak valid. Nilai alas atau tinggi tidak boleh lebih dari 3 digit desimal.");
+        return;
+    }
+
+    //Nilai yang diinput dihitung
+    let keliling = sisi1+sisi2+sisi3;
+    console.log(sisi1, satuanKeliling);
+    console.log(sisi2, satuanKeliling);
+    console.log(sisi3, satuanKeliling);
+    console.log(keliling, satuanKeliling);
+
+    // Menampilkan hasil keliling dengan ketentuan
+    if (Number.isInteger(keliling)) {
+        keliling = keliling.toFixed(0); // Tanpa digit desimal jika bilangan bulat
+    } else {
+        keliling = keliling.toFixed(3); // Hanya 3 digit desimal jika desimal
+    }
+
+    output_keliling.innerHTML =
+        `<strong>Penyelesaian:<br><br></strong>
         K = Sisi 1 + Sisi 2 + Sisi 3 <br>
-        K = ${s1} + ${s2} + ${s3} <br>
-        K = ${keliling} ${sk}`
-        reset_keliling.addEventListener('click', function(){
-            output_keliling.innerHTML = ``
-        })    
-    })
+        K = ${sisi1} + ${sisi2} + ${sisi3} <br>
+        K = ${keliling} ${satuanKeliling}`;
+
+    reset_keliling.addEventListener('click', function() {
+        output_keliling.innerHTML = ``;
+    });
+}
+
+//Nilai desimal terdiri dari 3 angka
+function countDecimalPlaces(num) {
+    if (Math.floor(num) === num || !isFinite(num)) return 0;
+    return num.toString().split(".")[1].length || 0;
 }
